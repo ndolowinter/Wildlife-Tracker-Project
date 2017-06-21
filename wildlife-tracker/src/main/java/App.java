@@ -13,7 +13,7 @@ import static spark.Spark.*;
 //class App
 public class App {
   private static Map<String, Object> model;
-
+// main function
   public static void main(String[] args) {
     staticFileLocation("/public");
     String layout = "templates/layout.vtl";
