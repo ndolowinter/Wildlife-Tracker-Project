@@ -1,0 +1,16 @@
+<h1>All animals</h1>
+
+
+<h3>Regular animals</h3>
+#if ($regularanimals.size() == 0)
+  <p>Sorry, we don't have any regular animals</p>
+#else
+  #parse("/templates/tables/all-regular-animals.vtl")
+#end
+
+<h3>Endangered animals</h3>
+#if ($endangeredanimals.size() == 0)
+  <p>Sorry, we don't have any endangered animals</p>
+#else
+  #parse("/templates/tables/all-endangered-animals.vtl")
+#end

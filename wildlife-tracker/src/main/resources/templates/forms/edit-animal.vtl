@@ -1,0 +1,19 @@
+<form action="/animals/edit" method="post">
+  <input id="type" name="type" type="hidden" value="$animal.getType()">
+  <input id="id" name="id" type="hidden" value="$animal.getId()">
+  <div class="form-group">
+    <label for="name">Animal name</label>
+    <input id="name" name="name" class="form-control" type="text" required value="$animal.getName()">
+  </div>
+  #if($animal.getType() == "endangered_animal")
+    <div class="form-group">
+      <label for="health">Health</label>
+      <input id="health" name="health" class="form-control" type="text" required value="$animal.getHealth()">
+    </div>
+    <div class="form-group">
+      <label for="age">Age</label>
+      <input id="age" name="age" class="form-control" type="number" step="any" required value="$animal.getAge()">
+    </div>
+  #end
+  <button class="btn btn-success" type="submit">Update animal</button>
+</form>

@@ -1,0 +1,11 @@
+<h1>Sighting details</h1>
+
+<p>Animal Name: $animal.getName()</p>
+#if($animal.DATABASE_TYPE == "endangered_animal")
+  <p>Animal Status: Endangered</p>
+#else
+  <p>Animal Status: Not Endangered</p>
+#end
+<p>Location Name: $location.getName()</p>
+<p>Ranger Name: $ranger.getUserName()</p>
+<p>Date and time: $sighting.getTimeOfSighting()</p>

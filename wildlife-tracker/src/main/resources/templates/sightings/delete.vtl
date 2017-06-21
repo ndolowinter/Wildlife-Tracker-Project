@@ -1,0 +1,7 @@
+<h1>Do you want to delete sighting?</h1>
+
+<form action="/sightings/delete" method="post">
+  <input id="sightingId" name="sightingId" type="text" value="$sighting.getId()" hidden>
+  <button class="btn btn-danger" type="submit">Delete</button>
+  <a href="javascript:history.back()"<button class="btn btn-success" type="button">Go back</button></a>
+</form>

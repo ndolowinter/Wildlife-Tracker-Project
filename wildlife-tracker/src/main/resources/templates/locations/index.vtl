@@ -1,0 +1,7 @@
+<h1>All locations</h1>
+
+#if ($locations.size() == 0)
+  <p>Sorry, we don't have any locations</p>
+#else
+  #parse("/templates/tables/all-locations.vtl")
+#end

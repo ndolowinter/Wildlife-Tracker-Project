@@ -1,0 +1,7 @@
+<h1>All rangers</h1>
+
+#if ($rangers.size() == 0)
+  <p>Sorry, we don't have any rangers</p>
+#else
+  #parse("/templates/tables/all-rangers.vtl")
+#end

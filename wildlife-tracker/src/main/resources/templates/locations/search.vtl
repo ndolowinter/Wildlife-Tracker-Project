@@ -1,0 +1,9 @@
+<h1>Search locations</h1>
+
+#parse("/templates/forms/search-location.vtl")
+
+#if ($locations.size() == 0)
+  <p class="text-center">No locations found.</p>
+#elseif ($locations)
+  #parse("/templates/tables/all-locations.vtl")
+#end

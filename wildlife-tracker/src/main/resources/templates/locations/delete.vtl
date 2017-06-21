@@ -1,0 +1,7 @@
+<h1>Do you want to delete $location.getName()?</h1>
+
+<form action="/locations/delete" method="post">
+  <input id="locationId" name="locationId" type="text" value="$location.getId()" hidden>
+  <button class="btn btn-danger" type="submit">Delete</button>
+  <a href="javascript:history.back()"<button class="btn btn-success" type="button">Go back</button></a>
+</form>

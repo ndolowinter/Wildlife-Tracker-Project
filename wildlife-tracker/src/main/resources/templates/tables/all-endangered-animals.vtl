@@ -1,0 +1,24 @@
+<div class="panel-body">
+  <table class="table table-striped sortable-table display">
+    <thead>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Health</th>
+      <th>View</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </thead>
+    <tbody>
+      #foreach ($animal in $endangeredanimals)
+        <tr>
+          <td>$animal.getName()</td>
+          <td>$animal.getAge()</td>
+          <td>$animal.getHealth()</td>
+          <td><a href="/animals/$animal.getId()">View</a></td>
+          <td><a href="/animals/edit/$animal.getId()">Edit</a></td>
+          <td><a href="/animals/delete/$animal.getId()">Delete</a></td>
+        </tr>
+      #end
+    </tbody>
+  </table>
+</div>

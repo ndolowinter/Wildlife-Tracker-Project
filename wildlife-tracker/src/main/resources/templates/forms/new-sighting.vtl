@@ -1,0 +1,31 @@
+<form action="/sightings" method="post">
+  <div class="form-group">
+    <label for="rangerId">Ranger</label>
+    <select id="rangerId" name="rangerId" type="text" class="form-control" required>
+      #foreach ($ranger in $rangers)
+        <option value="$ranger.getId()">$ranger.getUserName() - $ranger.getFirstName() $ranger.getLastName()</option>
+      #end
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="locationId">Location</label>
+    <select id="locationId" name="locationId" type="text" class="form-control" required>
+      #foreach ($location in $locations)
+        <option value="$location.getId()">$location.getName()</option>
+      #end
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="animalId">Animal</label>
+    <select id="animalId" name="animalId" type="text" class="form-control" required>
+      #foreach ($animal in $animals)
+        <option value="$animal.getId()">$animal.getName()</option>
+      #end
+    </select>
+  </div>
+  <div class="input-group date">
+    <label for="timeOfSighting">Date and time</label>
+    <input id="timeOfSighting" name="timeOfSighting" class="form-control" type="datetime-local" required>
+  </div>
+  <button class="btn btn-success" type="submit">Add sighting</button>
+</form>

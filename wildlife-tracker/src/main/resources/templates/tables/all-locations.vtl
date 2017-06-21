@@ -1,0 +1,22 @@
+<table class="table table-striped sortable-table display">
+  <thead>
+    <th>Name</th>
+    <th>X Coordinate</th>
+    <th>Y Coordinate</th>
+    <th>View</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </thead>
+  <tbody>
+    #foreach ($location in $locations)
+      <tr>
+        <td>$location.getName()</td>
+        <td>$location.getXCoord()</td>
+        <td>$location.getYCoord()</td>
+        <td><a href="/locations/$location.getId()">View</a></td>
+        <td><a href="/locations/edit/$location.getId()">Edit</a></td>
+        <td><a href="/locations/delete/$location.getId()">Delete</a></td>
+      </tr>
+    #end
+  </tbody>
+</table>

@@ -1,0 +1,22 @@
+<h1>Search animals</h1>
+
+#parse("/templates/forms/search-animal.vtl")
+
+#if ($animals.size() == 0)
+  <p class="text-center">No animals found.</p>
+#elseif ($regularanimals || $endangeredanimals)
+<h3>Regular animals</h3>
+#if ($regularanimals.size() == 0)
+  <p>No regular animals found</p>
+#else
+  #parse("/templates/tables/all-regular-animals.vtl")
+#end
+
+<h3>Endangered animals</h3>
+#if ($endangeredanimals.size() == 0)
+  <p>No endangered animals found</p>
+#else
+  #parse("/templates/tables/all-endangered-animals.vtl")
+#end
+
+#end

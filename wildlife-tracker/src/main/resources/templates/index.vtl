@@ -1,0 +1,44 @@
+<h1 class="text-center"> Wildlife Tracker</h1>
+<div class="row">
+  <div class="col-xs-3">
+    <h3 class="text-center">Animals</h3>
+    #if($animals.size() == 0)
+      <p>You don't have any animals. <a href="/animals/new">Add an Animal</a>
+    #else
+      <p><a href="/animals">View all animals</a></p>
+      <p><a href="/animals/search">Search animals</a></p>
+      <p><a href="/animals/new">Add new animal</a></p>
+    #end
+  </div>
+  <div class="col-xs-3">
+    <h3 class="text-center">Locations</h3>
+    #if($locations.size() == 0)
+      <p>You don't have any locations. <a href="/locations/new">Add a Location</a>
+    #else
+    <p><a href="/locations">View all locations</a></p>
+    <p><a href="/locations/search">Search locations</a></p>
+    <p><a href="/locations/new">Add new location</a></p>
+    #end
+  </div>
+  <div class="col-xs-3">
+    <h3 class="text-center">Rangers</h3>
+    #if($rangers.size() == 0)
+      <p>You don't have any rangers. <a href="/rangers/new">Add a Ranger</a>
+    #else
+    <p><a href="/rangers">View all rangers</a></p>
+    <p><a href="/rangers/search">Search rangers</a></p>
+    <p><a href="/rangers/new">Add new ranger</a></p>
+    #end
+  </div>
+  <div class="col-xs-3">
+    <h3 class="text-center">Sightings</h3>
+    #if($animals.size() == 0 || $locations.size() == 0 || $rangers.size() == 0)
+      <p>You must have at least one animal, location, and ranger before adding any sightings.</p>
+    #elseif($sightings == 0)
+      <p>You don't have any sightings. <a href="/sightings/new">Add a Sighting</a>
+    #else
+      <p><a href="/sightings">View all sightings</a></p>
+      <p><a href="/sightings/new">Add new sighting</a></p>
+    #end
+  </div>
+</div>

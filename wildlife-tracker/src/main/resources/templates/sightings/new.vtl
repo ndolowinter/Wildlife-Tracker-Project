@@ -1,0 +1,11 @@
+<h1>Add new sighting</h1>
+
+#if($rangers.size() == 0)
+  <p>Sorry, we don't have any rangers on file. Please add at least one ranger first.</p>
+#elseif($location.size() == 0)
+  <p>Sorry, we don't have any locations on file. Please add at least one location first.</p>
+#elseif($animal.size() == 0)
+  <p>Sorry, we don't have any animals on file. Please add at least one animal first.</p>
+#else
+  #parse("/templates/forms/new-sighting.vtl")
+#end

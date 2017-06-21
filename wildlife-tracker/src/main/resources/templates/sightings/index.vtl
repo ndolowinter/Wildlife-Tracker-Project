@@ -1,0 +1,7 @@
+<h1>All sightings</h1>
+
+#if ($sightings.size() == 0)
+  <p>Sorry, we don't have any sightings</p>
+#else
+  #parse("/templates/tables/all-sightings.vtl")
+#end

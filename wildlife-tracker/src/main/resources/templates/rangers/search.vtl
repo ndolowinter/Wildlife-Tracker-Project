@@ -1,0 +1,9 @@
+<h1>Search rangers</h1>
+
+#parse("/templates/forms/search-ranger.vtl")
+
+#if ($rangers.size() == 0)
+  <p class="text-center">No rangers found.</p>
+#elseif ($rangers)
+  #parse("/templates/tables/all-rangers.vtl")
+#end

@@ -1,0 +1,24 @@
+<table class="table table-striped sortable-table display">
+  <thead>
+    <th>Animal Name</th>
+    <th>Location Name</th>
+    <th>Ranger Name</th>
+    <th>Date/Time</th>
+    <th>View</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </thead>
+  <tbody>
+    #foreach ($sighting in $sightings)
+      <tr>
+        <td>$Animal.getAnimalName($sighting.getAnimalId())</td>
+        <td>$Location.getLocationName($sighting.getLocationId())</td>
+        <td>$Ranger.getRangerUserName($sighting.getRangerId())</td>
+        <td>$sighting.getTimeOfSighting()</td>
+        <td><a href="/sightings/$sighting.getId()">View</a></td>
+        <td><a href="/sightings/edit/$sighting.getId()">Edit</a></td>
+        <td><a href="/sightings/delete/$sighting.getId()">Delete</a></td>
+      </tr>
+    #end
+  </tbody>
+</table>

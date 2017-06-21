@@ -1,0 +1,26 @@
+<table class="table table-striped sortable-table display">
+  <thead>
+    <th>User Name</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Badge No.</th>
+    <th>Phone No.</th>
+    <th>View</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </thead>
+  <tbody>
+    #foreach ($ranger in $rangers)
+      <tr>
+        <td>$ranger.getUserName()</td>
+        <td>$ranger.getFirstName()</td>
+        <td>$ranger.getLastName()</td>
+        <td>$ranger.getBadge()</td>
+        <td>$ranger.getPhone()</td>
+        <td><a href="/rangers/$ranger.getId()">View</a></td>
+        <td><a href="/rangers/edit/$ranger.getId()">Edit</a></td>
+        <td><a href="/rangers/delete/$ranger.getId()">Delete</a></td>
+      </tr>
+    #end
+  </tbody>
+</table>

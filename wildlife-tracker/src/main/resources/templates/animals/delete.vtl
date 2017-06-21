@@ -1,0 +1,7 @@
+<h1>Do you want to delete $animal.getName()?</h1>
+
+<form action="/animals/delete" method="post">
+  <input id="animalId" name="animalId" type="text" value="$animal.getId()" hidden>
+  <button class="btn btn-danger" type="submit">Delete</button>
+  <a href="javascript:history.back()"<button class="btn btn-success" type="button">Go back</button></a>
+</form>

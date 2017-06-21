@@ -1,0 +1,16 @@
+<form action="/animals" method="post">
+  <input id="type" name="type" type="hidden" value="endangered_animal">
+  <div class="form-group">
+    <label for="name">Animal name</label>
+    <input id="name" name="name" class="form-control" type="text" required>
+  </div>
+  <div class="form-group">
+    <label for="health">Health</label>
+    <input id="health" name="health" class="form-control" type="text" required>
+  </div>
+  <div class="form-group">
+    <label for="age">Age</label>
+    <input id="age" name="age" class="form-control" type="number" step="any" required>
+  </div>
+  <button class="btn btn-success" type="submit">Add endangered animal</button>
+</form>

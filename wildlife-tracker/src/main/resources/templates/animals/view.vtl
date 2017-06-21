@@ -1,0 +1,10 @@
+<h1>Animal details</h1>
+
+<p>Name: $animal.getName()</p>
+#if ($animal.getType() == "endangered_animal")
+  <p>Status: Endangered</p>
+  <p>Health: $animal.getHealth()</p>
+  <p>Age: $animal.getAge()</p>
+#else
+  <p> Status: Not endangered</p>
+#end
